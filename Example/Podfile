@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SimpleAdapter_Example' do
+  pod 'SimpleAdapter', :path => '../'
+
+  target 'SimpleAdapter_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
