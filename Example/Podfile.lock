@@ -1,0 +1,16 @@
+PODS:
+  - SimpleAdapter (0.1.0)
+
+DEPENDENCIES:
+  - SimpleAdapter (from `../`)
+
+EXTERNAL SOURCES:
+  SimpleAdapter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SimpleAdapter: 7d651b700c2aab20ba0f30996f3f478ea595e70e
+
+PODFILE CHECKSUM: 822e69e16a9a6a789998e5b6d57546768f06a325
+
+COCOAPODS: 1.8.4

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		108B73DB242F173400502B2B /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108B73D4242F173300502B2B /* TextCell.xib */; };
+		108B73DC242F173400502B2B /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108B73D5242F173300502B2B /* TextCell.swift */; };
+		108B73DE242F173400502B2B /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108B73D8242F173300502B2B /* ButtonCell.xib */; };
+		108B73E0242F173400502B2B /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108B73DA242F173300502B2B /* ButtonCell.swift */; };
+		108B73E4242F18CD00502B2B /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108B73E3242F18CD00502B2B /* TextFieldCell.swift */; };
+		108B73E6242F18DC00502B2B /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 108B73E5242F18DC00502B2B /* TextFieldCell.xib */; };
+		108B73E8242F18EA00502B2B /* TextFieldItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108B73E7242F18EA00502B2B /* TextFieldItem.swift */; };
+		108B73EA242F197300502B2B /* ButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108B73E9242F197300502B2B /* ButtonItem.swift */; };
+		108B73EC242F199500502B2B /* TextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108B73EB242F199500502B2B /* TextItem.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,6 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		108B73D4242F173300502B2B /* TextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
+		108B73D5242F173300502B2B /* TextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		108B73D8242F173300502B2B /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		108B73DA242F173300502B2B /* ButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		108B73E3242F18CD00502B2B /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
+		108B73E5242F18DC00502B2B /* TextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
+		108B73E7242F18EA00502B2B /* TextFieldItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldItem.swift; sourceTree = "<group>"; };
+		108B73E9242F197300502B2B /* ButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonItem.swift; sourceTree = "<group>"; };
+		108B73EB242F199500502B2B /* TextItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextItem.swift; sourceTree = "<group>"; };
 		1CC654990C05C524709E2951 /* Pods-SimpleAdapter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleAdapter_Example.release.xcconfig"; path = "Target Support Files/Pods-SimpleAdapter_Example/Pods-SimpleAdapter_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2FE6EF25B8C8DC9A6312F753 /* Pods_SimpleAdapter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleAdapter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* SimpleAdapter_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleAdapter_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,12 +59,12 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6EB7569B900FCA89799D876E /* Pods-SimpleAdapter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleAdapter_Example.debug.xcconfig"; path = "Target Support Files/Pods-SimpleAdapter_Example/Pods-SimpleAdapter_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		7607A4628937B42776125CB4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		7A3AAF7E3C53A175E388650C /* SimpleAdapter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SimpleAdapter.podspec; path = ../SimpleAdapter.podspec; sourceTree = "<group>"; };
+		7607A4628937B42776125CB4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		7A3AAF7E3C53A175E388650C /* SimpleAdapter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SimpleAdapter.podspec; path = ../SimpleAdapter.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8E117E72CC435437E3113F92 /* Pods-SimpleAdapter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleAdapter_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleAdapter_Tests/Pods-SimpleAdapter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9A20CEB8DDFECE36E51D325C /* Pods-SimpleAdapter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleAdapter_Tests.release.xcconfig"; path = "Target Support Files/Pods-SimpleAdapter_Tests/Pods-SimpleAdapter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B7CAFC08A3AF8A05A00AC6E0 /* Pods_SimpleAdapter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleAdapter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5C76B700FE49BF42F6F29E5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E5C76B700FE49BF42F6F29E5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +87,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		108B73D2242F173300502B2B /* SampleCells */ = {
+			isa = PBXGroup;
+			children = (
+				108B73E2242F18BB00502B2B /* TextFieldCell */,
+				108B73D3242F173300502B2B /* TextCell */,
+				108B73D7242F173300502B2B /* Button */,
+			);
+			path = SampleCells;
+			sourceTree = "<group>";
+		};
+		108B73D3242F173300502B2B /* TextCell */ = {
+			isa = PBXGroup;
+			children = (
+				108B73D4242F173300502B2B /* TextCell.xib */,
+				108B73D5242F173300502B2B /* TextCell.swift */,
+				108B73EB242F199500502B2B /* TextItem.swift */,
+			);
+			path = TextCell;
+			sourceTree = "<group>";
+		};
+		108B73D7242F173300502B2B /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				108B73D8242F173300502B2B /* ButtonCell.xib */,
+				108B73DA242F173300502B2B /* ButtonCell.swift */,
+				108B73E9242F197300502B2B /* ButtonItem.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		108B73E2242F18BB00502B2B /* TextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				108B73E5242F18DC00502B2B /* TextFieldCell.xib */,
+				108B73E3242F18CD00502B2B /* TextFieldCell.swift */,
+				108B73E7242F18EA00502B2B /* TextFieldItem.swift */,
+			);
+			path = TextFieldCell;
+			sourceTree = "<group>";
+		};
 		58D49040163E1F1E6AA26A61 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,7 +135,6 @@
 				8E117E72CC435437E3113F92 /* Pods-SimpleAdapter_Tests.debug.xcconfig */,
 				9A20CEB8DDFECE36E51D325C /* Pods-SimpleAdapter_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -105,6 +162,7 @@
 		607FACD21AFB9204008FA782 /* Example for SimpleAdapter */ = {
 			isa = PBXGroup;
 			children = (
+				108B73D2242F173300502B2B /* SampleCells */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -227,6 +285,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -248,7 +307,10 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				108B73DE242F173400502B2B /* ButtonCell.xib in Resources */,
+				108B73DB242F173400502B2B /* TextCell.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				108B73E6242F18DC00502B2B /* TextFieldCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +394,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				108B73EA242F197300502B2B /* ButtonItem.swift in Sources */,
+				108B73DC242F173400502B2B /* TextCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				108B73E4242F18CD00502B2B /* TextFieldCell.swift in Sources */,
+				108B73E8242F18EA00502B2B /* TextFieldItem.swift in Sources */,
+				108B73E0242F173400502B2B /* ButtonCell.swift in Sources */,
+				108B73EC242F199500502B2B /* TextItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

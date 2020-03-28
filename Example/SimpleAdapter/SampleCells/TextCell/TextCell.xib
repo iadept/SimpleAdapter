@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="157" id="QgO-pO-ase" customClass="TextCell" customModule="TablePresenter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QgO-pO-ase" id="2A9-ej-CdS">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLR-DJ-UXV">
+                        <rect key="frame" x="10" y="10" width="394" height="137"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="JLR-DJ-UXV" firstAttribute="leading" secondItem="2A9-ej-CdS" secondAttribute="leading" constant="10" id="7vP-NY-yXa"/>
+                    <constraint firstAttribute="trailing" secondItem="JLR-DJ-UXV" secondAttribute="trailing" constant="10" id="9td-hs-Tuf"/>
+                    <constraint firstItem="JLR-DJ-UXV" firstAttribute="top" secondItem="2A9-ej-CdS" secondAttribute="top" constant="10" id="PgY-jd-Ii2"/>
+                    <constraint firstAttribute="bottom" secondItem="JLR-DJ-UXV" secondAttribute="bottom" constant="10" id="YCH-Yf-vlA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="label" destination="JLR-DJ-UXV" id="ddx-Wn-qtm"/>
+            </connections>
+            <point key="canvasLocation" x="160.86956521739131" y="64.620535714285708"/>
+        </tableViewCell>
+    </objects>
+</document>
