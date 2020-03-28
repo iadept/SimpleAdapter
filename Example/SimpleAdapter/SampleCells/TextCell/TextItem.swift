@@ -9,9 +9,9 @@
 import SimpleAdapter
 
 class TextItem: SATableViewItem {
-    
+
     let text: String
-    
+
     init(text: String) {
         self.text = text
         super.init(cellIdentifier: TextCell.cellIdentifier)

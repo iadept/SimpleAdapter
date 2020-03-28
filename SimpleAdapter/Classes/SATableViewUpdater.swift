@@ -36,14 +36,14 @@ public enum SATableViewUpdaterCommand {
 }
 
 public class SATableViewUpdater {
-    
+
     private var commands = [Command]()
     private let adapter: SATableViewAdapter
-    
+
     init(adapter: SATableViewAdapter) {
         self.adapter = adapter
     }
-    
+
     init(adapter: SATableViewAdapter, commands: [SATableViewUpdaterCommand]) {
         self.adapter = adapter
         for command in commands {
@@ -57,7 +57,7 @@ public class SATableViewUpdater {
             }
         }
     }
-    
+
     public func insert(
         item: SATableViewItem,
         to: SATableViewInsertPosition,
@@ -68,13 +68,13 @@ public class SATableViewUpdater {
             to: to,
             animation: animation))
     }
-    
+
     public func remove(atIndex index: Int, animation: UITableView.RowAnimation) {
         commands.append(CommandRemoveIndex(
             index: index,
             animation: animation))
     }
-    
+
     public func update(
         item: SATableViewItem,
         at: SATableViewUpdatePosition,
@@ -85,7 +85,7 @@ public class SATableViewUpdater {
             at: at,
             animation: animation))
     }
-    
+
     public func perform() {
         for command in commands {
             adapter.tableView?.beginUpdates()

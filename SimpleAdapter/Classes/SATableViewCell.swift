@@ -9,13 +9,13 @@
 import UIKit
 
 open class SATableViewCell: UITableViewCell {
-    
-    public private(set) var item: SATableViewItem? = nil
-    
+
+    public private(set) var item: SATableViewItem?
+
     func set(item: SATableViewItem) {
         self.item = item
         fill()
     }
-    
+
     open func fill() {}
 }

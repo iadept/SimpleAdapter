@@ -13,17 +13,17 @@ protocol TextFieldItemDelegate: AnyObject {
 }
 
 class TextFieldItem: SATableViewItem {
-    
+
     private weak var delegate: TextFieldItemDelegate?
-    
+
     let placeholder: String
-    
+
     var value: String = "" {
         didSet {
             delegate?.textFieldItem(self, didChangeValue: value)
         }
     }
-    
+
     init(placeholder: String,
          delegate: TextFieldItemDelegate) {
         self.placeholder = placeholder

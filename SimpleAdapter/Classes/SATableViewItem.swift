@@ -11,10 +11,10 @@ import Foundation
 open class SATableViewItem {
 
     public private(set) weak var cell: SATableViewCell?
-    
+
     let cellIdentifier: String
     let itemIdentifier: String?
-   
+
     public init(
         cellIdentifier: String,
         itemIdentifier: String? = nil
@@ -22,7 +22,7 @@ open class SATableViewItem {
         self.cellIdentifier = cellIdentifier
         self.itemIdentifier = itemIdentifier
     }
-    
+
     func set(cell: SATableViewCell) {
         self.cell = cell
     }

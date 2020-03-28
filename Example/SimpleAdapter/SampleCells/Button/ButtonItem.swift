@@ -9,26 +9,26 @@
 import SimpleAdapter
 
 protocol ButtonItemDelegate: AnyObject {
-    
+
     func buttonItemDidTap(_ item: ButtonItem)
 }
 
 class ButtonItem: SATableViewItem {
- 
+
     private(set) weak var delegate: ButtonItemDelegate?
-    
+
     let title: String
-    
+
     var visibleCell: ButtonCell? { // For fast access without cast
         return cell as? ButtonCell
     }
-    
+
     var isEnabled: Bool = true {
         willSet {
             visibleCell?.set(isEnabled: newValue)
         }
     }
-    
+
     init(identifier: ItemIdentifier, title: String, delegate: ButtonItemDelegate) {
         self.title = title
         self.delegate = delegate

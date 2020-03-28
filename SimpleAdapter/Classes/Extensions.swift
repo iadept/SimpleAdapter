@@ -15,7 +15,7 @@ extension Array where Element == SATableViewItem {
         }
         return 0
     }
-    
+
     subscript(indexPath: IndexPath) -> SATableViewItem {
         return self[indexPath.row]
     }

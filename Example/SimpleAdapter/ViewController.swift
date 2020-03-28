@@ -16,22 +16,23 @@ enum ItemIdentifier: String {
 class ViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView?
-    
+
     private var adapter: SATableViewAdapter?
     private var textFieldItem: TextFieldItem?
-       
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let a = 4
+        print(a)
         guard let tableView = tableView else { return }
         adapter = SATableViewAdapter(tableView: tableView)
-        
+
         adapter?.register(cell: TextCell.self, withIdentifier: TextCell.cellIdentifier)
         adapter?.register(cell: ButtonCell.self, withIdentifier: ButtonCell.cellIdentifier)
         adapter?.register(cell: TextFieldCell.self, withIdentifier: TextFieldCell.cellIdentifier)
-        
+
         adapter?.set(items: [TextItem(text: "Hello")])
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             guard let updater = self.adapter?.makeUpdater() else { return }
             updater.remove(atIndex: 0, animation: .fade)
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
             updater.insert(item: TextItem(text: "1"), to: .top, animation: .fade)
             updater.perform()
         }
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             let buttonCellItem = ButtonItem(
                 identifier: .addButton,
@@ -75,7 +76,8 @@ extension ViewController: ButtonItemDelegate {
 extension ViewController: TextFieldItemDelegate {
     func textFieldItem(_ item: TextFieldItem, didChangeValue value: String) {
         // Get item by id
-        guard let buttonItem = adapter?.item(forIdentifier: ItemIdentifier.addButton.rawValue) as? ButtonItem else { return }
+        guard let buttonItem = adapter?.item(
+            forIdentifier: ItemIdentifier.addButton.rawValue) as? ButtonItem else { return }
         buttonItem.isEnabled = !value.isEmpty
     }
 }

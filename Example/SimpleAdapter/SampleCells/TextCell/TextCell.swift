@@ -12,13 +12,13 @@ import SimpleAdapter
 class TextCell: SATableViewCell {
 
     static let cellIdentifier = "text"
-  
+
     @IBOutlet weak var label: UILabel?
-    
+
     var requiredItem: TextItem? {
         return item as? TextItem
     }
-    
+
     override func fill() {
         label?.text = requiredItem?.text
     }

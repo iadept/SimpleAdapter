@@ -12,11 +12,11 @@ protocol Command {
 }
 
 class CommandInsert: Command {
-    
+
     let to: SATableViewInsertPosition
     let item: SATableViewItem
     let animation: UITableView.RowAnimation
-    
+
     init(item: SATableViewItem,
          to: SATableViewInsertPosition,
          animation: UITableView.RowAnimation) {
@@ -24,7 +24,7 @@ class CommandInsert: Command {
         self.item = item
         self.animation = animation
     }
-    
+
     func perfrom(adapter: SATableViewAdapter) {
         var indexPath: IndexPath?
         switch to {
@@ -53,16 +53,16 @@ class CommandInsert: Command {
 }
 
 class CommandRemoveIndex: Command {
-    
+
     let index: Int
     let animation: UITableView.RowAnimation
-    
+
     init(index: Int,
          animation: UITableView.RowAnimation) {
         self.index = index
         self.animation = animation
     }
-    
+
     func perfrom(adapter: SATableViewAdapter) {
         adapter.tableView?.deleteRows(at: [IndexPath(row: index, section: 0)], with: animation)
         adapter.items.remove(at: index)
@@ -70,11 +70,11 @@ class CommandRemoveIndex: Command {
 }
 
 class CommandUpdate: Command {
-    
+
     let at: SATableViewUpdatePosition
     let item: SATableViewItem
     let animation: UITableView.RowAnimation
-    
+
     init(item: SATableViewItem,
          at: SATableViewUpdatePosition,
          animation: UITableView.RowAnimation) {
@@ -82,7 +82,7 @@ class CommandUpdate: Command {
         self.at = at
         self.animation = animation
     }
-    
+
     func perfrom(adapter: SATableViewAdapter) {
         switch at {
         case .index(let value):

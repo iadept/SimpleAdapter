@@ -26,7 +26,6 @@ class TextCell: SATableViewCell {
     }
 }
 
-
 // Create item class
 class TextItem: SATableViewItem {
     let text: String
@@ -52,7 +51,7 @@ class ViewController: UIViewController {
 After you may insert/remove/update any item
 ```swift
 self.adapter?.update([
-.insert(item: TextItem(text: "Did Tap"), to: .top, animation: .top),
+    .insert(item: TextItem(text: "New item"), to: .top, animation: .top),
 ])
 ```
 All variant use adapter in example project
