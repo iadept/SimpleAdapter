@@ -9,8 +9,53 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+## Usage
 
+```swift
+import SimpleAdapter
+
+// Create cell class and xib with TableViewCell with same name(don't forget set custom class)
+class TextCell: SATableViewCell {
+    static let cellIdentifier = "text" // reuseIdentifier store variant
+  
+    @IBOutlet weak var label: UILabel?
+  
+    override func fill() {
+        guard let item = item as? TextItem else { return }
+        label?.text = item?.text
+    }
+}
+
+
+// Create item class
+class TextItem: SATableViewItem {
+    let text: String
+    
+    init(text: String) {
+        self.text = text
+        super.init(cellIdentifier: TextCell.cellIdentifier)
+    }
+}
+
+
+class ViewController: UIViewController {
+    private var adapter: SATableViewAdapter?
+
+    func setupUI() {
+        adapter = SATableViewAdapter(tableView: tableView)
+        adapter?.register(cell: SampleCell.self, withIdentifier: SampleCell.cellIdentifier)
+        
+        adapter?.set(items: [TextItem(text: "Hello")])
+    }
+}
+```
+After you may insert/remove/update any item
+```swift
+self.adapter?.update([
+.insert(item: TextItem(text: "Did Tap"), to: .top, animation: .top),
+])
+```
+All variant use adapter in example project
 ## Installation
 
 SimpleAdapter is available through [CocoaPods](https://cocoapods.org). To install
