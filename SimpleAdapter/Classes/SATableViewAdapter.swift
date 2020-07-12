@@ -54,11 +54,7 @@ public class SATableViewAdapter: NSObject {
 // MARK: - UITableViewDataSource
 extension SATableViewAdapter: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if items.isEmpty {
-            tableView.backgroundView = nil
-        } else {
-            tableView.backgroundView = emptyView
-        }
+        tableView.backgroundView = items.isEmpty ? emptyView : nil
         return items.count
     }
 
