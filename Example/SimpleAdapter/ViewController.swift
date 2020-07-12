@@ -68,7 +68,7 @@ extension ViewController: ButtonItemDelegate {
         if let textFieldItem = textFieldItem {
             self.adapter?.update([
                 .insert(item: TextItem(text: "Text: \(textFieldItem.value)"), to: .top, animation: .top)
-            ])
+        ])
         } else {
             let textFieldItem = TextFieldItem(placeholder: "Input text and press add", delegate: self)
             self.adapter?.update([
