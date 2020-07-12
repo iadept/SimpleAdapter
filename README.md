@@ -14,7 +14,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ```swift
 import SimpleAdapter
 
-// Create cell class and xib with TableViewCell with same name(don't forget set custom class)
+// Create cell class and xib with TableViewCell with same name(don't forget set custom class!)
 class TextCell: SATableViewCell {
     static let cellIdentifier = "text" // reuseIdentifier store variant
   

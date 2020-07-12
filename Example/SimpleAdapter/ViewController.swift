@@ -22,18 +22,25 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let a = 4
-        print(a)
+        
         guard let tableView = tableView else { return }
         adapter = SATableViewAdapter(tableView: tableView)
-
+        
+        let emptyView = UILabel()
+        emptyView.text = "Empty table!"
+        adapter?.emptyView = emptyView
+        
         adapter?.register(cell: TextCell.self, withIdentifier: TextCell.cellIdentifier)
         adapter?.register(cell: ButtonCell.self, withIdentifier: ButtonCell.cellIdentifier)
         adapter?.register(cell: TextFieldCell.self, withIdentifier: TextFieldCell.cellIdentifier)
 
-        adapter?.set(items: [TextItem(text: "Hello")])
+        adapter?.set(items: [])
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.adapter?.set(items: [TextItem(text: "Hello")])
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             guard let updater = self.adapter?.makeUpdater() else { return }
             updater.remove(atIndex: 0, animation: .fade)
             updater.insert(item: TextItem(text: "4"), to: .bottom, animation: .fade)
@@ -43,7 +50,7 @@ class ViewController: UIViewController {
             updater.perform()
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
             let buttonCellItem = ButtonItem(
                 identifier: .addButton,
                 title: "Add cell",

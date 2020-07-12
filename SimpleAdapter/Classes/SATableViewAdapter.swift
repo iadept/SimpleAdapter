@@ -13,6 +13,7 @@ public class SATableViewAdapter: NSObject {
     weak var tableView: UITableView?
     var items: [SATableViewItem]
     public var count: Int { return items.count }
+    public weak var emptyView: UIView?
 
     public init(tableView: UITableView) {
         items = []
@@ -53,6 +54,11 @@ public class SATableViewAdapter: NSObject {
 // MARK: - UITableViewDataSource
 extension SATableViewAdapter: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if items.count > 0 {
+            tableView.backgroundView = nil
+        } else {
+            tableView.backgroundView = emptyView
+        }
         return items.count
     }
 
