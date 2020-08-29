@@ -21,13 +21,20 @@ public enum SATableViewUpdatePosition {
     case item(identifier: String)
 }
 
+public enum SATableViewRemovePosition {
+    case index(value: Int)
+    case item(identifier: String)
+    case type(value: SATableViewItem.Type)
+    case all
+}
+
 public enum SATableViewUpdaterCommand {
     case insert(
         item: SATableViewItem,
         to: SATableViewInsertPosition,
         animation: UITableView.RowAnimation)
     case remove(
-        at: Int,
+        at: SATableViewRemovePosition,
         animation: UITableView.RowAnimation)
     case update(
         item: SATableViewItem,
@@ -51,7 +58,7 @@ public class SATableViewUpdater {
             case .insert(let item, let to, let animation):
                 insert(item: item, to: to, animation: animation)
             case .remove(let at, let animation):
-                remove(atIndex: at, animation: animation)
+                remove(at: at, animation: animation)
             case .update(let item, let at, let animation):
                 update(item: item, at: at, animation: animation)
             }
@@ -69,9 +76,9 @@ public class SATableViewUpdater {
             animation: animation))
     }
 
-    public func remove(atIndex index: Int, animation: UITableView.RowAnimation) {
-        commands.append(CommandRemoveIndex(
-            index: index,
+    public func remove(at: SATableViewRemovePosition, animation: UITableView.RowAnimation) {
+        commands.append(CommandRemove(
+            at: at,
             animation: animation))
     }
 

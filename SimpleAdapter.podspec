@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SimpleAdapter'
-  s.version          = '0.1.5'
+  s.version          = '0.2.0'
   s.summary          = 'Simple adapter for UITableView.'
 
 # This description is used to generate tags and improve search results.
